@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="/css/employeesection.css">
+
+<div id="main-div">
+    <h1>All Employees List</h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Permission</th>
+        </tr>
+        <%for(let user of users){%>
+
+            <form action="/employee/update/<%=user.id%>" method="POST">
+                <tr>
+                    <td><input type="text" name="name" placeholder="Name" value="<%=user.name%>" required></td>
+                    <td><input type="email" name="email" placeholder="Email" value="<%=user.email%>" required></td>
+                    <td><input type="text" name="password" placeholder="Password" value="<%=user.password%>" required></td>
+                    <td><input type="text" name="permission" placeholder="Permission" disabled  value="<%=user.permission%>" required></td>
+                    <td><button class="update" type="submit">Update</button></td>
+                    <td><button class="delete" type="button"><a href="/employee/delete/<%=user.id%>">Delete</a></button></td>
+                    <% if (user.permission === 'admin') { %>
+                        <td>
+                            <button class="removeAdmin" type="button">
+                                <a href="/employee/removeadmin/<%=user.id%>">Remove Admin</a>
+                            </button>
+                        </td>
+                        <% } else { %>
+                            <td>
+                                <button class="makeAdmin" type="button">
+                                    <a href="/employee/makeadmin/<%=user.id%>">Make Admin</a>
+                                </button>
+                            </td>
+                            <% } %>
+                </tr>
+            </form>
+            <%}%>
+    </table>
+
+    <!-- <div id="headings">
+        <p>Name</p>
+        <p>Email</p>
+        <p>Password</p>
+        <p>Permission</p>
+    </div>
+    <hr>
+
+    <%for(let user of users){%>
+
+    <form action="/employee/update/<%=user.id%>" method="POST">
+            <input type="text" name="name" placeholder="Name" value="<%=user.name%>" required>
+            <input type="email" name="email" placeholder="Email" value="<%=user.email%>" required>
+            <input type="text" name="password" placeholder="Password" value="<%=user.password%>" required>
+            <input type="text" name="permission" placeholder="Permission" disabled  value="<%=user.permission%>" required>
+            <button type="submit">Update</button>
+            <button type="button"><a href="/employee/delete/<%=user.id%>">Delete</a></button>
+            <% if (user.permission === 'admin') { %>
+                <button type="button">
+                    <a href="/employee/removeadmin/<%=user.id%>">Remove Admin</a>
+                </button>
+            <% } else { %>
+                <button type="button">
+                    <a href="/employee/makeadmin/<%=user.id%>">Make Admin</a>
+                </button>
+            <% } %>
+            
+            
+    </form>
+    <%}%> -->
+   
+</div>

@@ -1,0 +1,106 @@
+body {
+    
+    text-align: left;
+    background: #ebeef1;
+  }
+  
+  .layout-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #main-div {
+    margin-top: 4%;
+    width: 90%;
+    background: transparent;
+    
+    padding-bottom: 1%;
+  }
+  
+  
+  #main-div h1 {
+    text-align: center;
+  }
+  table {
+    width: 100%;
+    padding: 15px 20px 0 20px;
+  }
+  table th{
+    padding-left: 10px;
+  }
+
+  table td{
+   padding-top: 10px;
+   
+   border-top: 2px solid black;
+    
+  }
+
+  table td input{
+    width: 90%;
+    height: 30px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    border: 0;
+    outline: 0;
+    background: #ebeef1;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+                -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+    padding-left: 5px;
+    font-weight: 500;
+    
+  }
+
+  table td input:focus{
+    box-shadow: inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+               inset -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+  }
+
+  table td button{
+    position: relative;
+    width: 80%;
+    height: 30px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    border: 0;
+    outline: 0;
+    background: #ebeef1;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+                -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+  }
+
+  .update {
+    cursor: pointer;
+    color: #00a037;
+  }
+
+  .makeAdmin a{
+    text-decoration: none;
+    color: #00a037;
+  }
+
+  .delete{ 
+    box-shadow: inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+                inset -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+  }
+
+  .delete a{
+    color: #ed0000;
+    text-decoration: none;
+  }
+
+  .removeAdmin{
+    box-shadow: inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+                inset -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+  }
+
+  .removeAdmin a{
+    color: #ed0000;
+    text-decoration: none;
+  }
+  
+  

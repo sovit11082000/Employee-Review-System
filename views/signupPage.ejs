@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/signUp.css">
+<div class="body">
+    <div class="wrapper">   
+    <div class="main-div signup">
+    <form action="/users/create" method="POST">
+        <h1>Sign Up</h1>
+        <div class="input-group">
+        <input type="text" id="username" name="name" required>
+        <label for="name">Name</label>
+        </div>
+        <div class="input-group">
+        <input type="email" id="email" name="email" required>
+        <label for="email">Email</label>
+        </div>
+        <div class="input-group">
+        <input type="password" id="password" name="password" required>
+        <label for="password">Password</label>
+        </div>
+        <div class="input-group">
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        <label for="confirm_password">Confirm Password</label>
+        </div>
+        <input type="hidden" name="permission" value="employee">
+        <div class="remember">
+            <label for="">
+                <input type="checkbox" >  I agree to the terms and conditions
+            </label>
+        </div>
+        <button type="submit"> Register </button>
+        <% if(!locals.user){%>
+            <div class="signin-link">
+            <p>Already have an Account <a href="/users/signin" class="signin-linkBtn"> Sign In</a></p>
+            </div>
+            <%}%>
+        
+    </form>
+    </div>
+    </div>
+
+</div>
+

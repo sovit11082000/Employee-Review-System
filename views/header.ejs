@@ -1,0 +1,27 @@
+<header>
+    <div class="header-main-div">
+        <div>
+            <p><i class="fa-solid fa-users"></i> Employee Review System</p>
+        </div>
+        <div>
+            <ul>
+                <% if(locals.user){%>
+                    <%if(locals.user.permission=='admin'){%>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/review/assignWork">Assign Work</a></li>
+                    <li><a href="/employee/home">Employee Section</a></li>
+                    <li><a href="/users/Signup">Register</a></li>
+                    <%}%>
+                    <li>Hello <%=user.name%>
+                    </li>
+                    <li><a href="/users/Signout">Sign Out</a></li>
+
+                    <% }else{%>
+                        <li><a href="/users/Signin">Sign In</a></li>
+                        <li><a href="/users/Signup">Sign Up</a></li>
+                        <%}%>
+            </ul>
+        </div>
+    </div>
+
+</header>
