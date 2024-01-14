@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const expressLayouts= require('express-ejs-layouts')
 
+// local host
 const port=8080;
 
 //Used for Session Cookie
